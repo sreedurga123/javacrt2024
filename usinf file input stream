@@ -1,0 +1,18 @@
+import java.util.*;
+import java.io.*; 
+public class Test22{
+    public static void main(String args[])throws Exception
+    {
+       FileInputStream fis=new FileInputStream("abc.txt");
+       Properties p=new Properties();
+       p.load(fis);
+       String x=p.getProperty("first");
+       String y=p.getProperty("second");
+       int a,b,c;
+       a=Integer.parseInt(x);
+       b=Integer.parseInt(y);
+       c=a+b;
+       System.out.println(c);
+       fis.close();
+}
+}
